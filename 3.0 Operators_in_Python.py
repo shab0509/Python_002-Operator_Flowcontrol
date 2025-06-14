@@ -9,7 +9,7 @@
 / : Division
 % : Modulus
 ** : Exponential
-// : Floor Division
+// : Floor Division (5\2 =2.5 => 2 in floor division)
 
 a=float(input(print("Enter an number : ")))
 b=float(input(print("Enter second number : ")))
@@ -55,12 +55,13 @@ print(a,b)
     1. Bitwise Left Shift Operator (<<)
     2. Bitwise Right Shift Operator (>>)
 
-    3. Bitwise OR (|)
-    4. Bitwise AND (&)
-    5. Bitwise NOT (~)
-    6. Bitwise XOR (^) <one value has 1 and other has to be 0>
+    3. Bitwise OR (|) (Similar to OR Operator)
+    4. Bitwise AND (&) (Similar to AND Operator)
+    5. Bitwise NOT (~) (Similar to NOT Operator)
+    6. Bitwise XOR (^) <One value has 1 and Other has to be 0>
+    7. Bitwise Complement Operator (~) (Gives one's complement of the given number)
 
-# 005__ Membership Operator
+# 005__Membership Operator
 ######################################
 # 2 types of operator
 #   a> in
