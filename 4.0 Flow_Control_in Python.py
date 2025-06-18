@@ -4,25 +4,29 @@ In Python Programming, we have 3 types of flow control statements:
 2. Looping Statement (WHILE / FOR )
 3. Misc Flow Control Statement (break / continue)
 
+# Inorder to deal with any looping statement, we must use 3 points:
+# Intialisation / Condition / Increment
+
 #Conditional Statement
 ##############################################
 
-#bigex
-print("Enter First Number :")
-a= int(input())
-print("Enter Second Number :")
-b= int(input())
-print("Enter Third Number :")
-c= int(input())
 
-if(a==b==c):
+#Find the Greatest of three number
+
+n1= int(input("Enter First Number : "))
+n2 =int(input("Enter Second Number : "))
+n3 =int(input("Enter Third number : "))
+if((n1==n2==n3)):
     print("All are Equal")
-elif(a>b and a>c):
-    print("A is the greatest")
-elif(b>a and b>c):
-    print("B is the greatest")
 else:
-    print("C is the greatest")
+    if((n1>=n2) and (n1>=n3)):
+print("{} is the Greatest".format(n1))
+else:
+if((n2>=n1) and (n2>=n3)):
+    print("{} is the Greatest".format(n2))
+else:
+    print("{} is the Greatest".format(n3))
+
 
 #Prg to decide whether the number is positive or negative
 a= int(input("Enter an integer value :"))
@@ -40,17 +44,6 @@ if(a%2==0):
 else:
     print("{} is odd number".format(a))
 
-# Ticket
-a = str(input("Do u have ticket? :"))
-b = a.lower()
-if(b =='yes'):
-    print("Enter the Hall")
-    print("Watch Movie")
-    print("Leave hall")
-elif(b=='no'):
-    print("Go Home and enjoy the day better than movie hall")
-else:
-    print("pls enter valid input")
 
 #Looping Statement
 ##############################################
@@ -107,16 +100,21 @@ else:
         i=i-1
 
 #Factorials
-n = int(input("Enter any number : "))
-if(n<=0):
-    print("Number is invalid")
+x = int(input("Enter Any Number :"))
+def fact(i):
+    f=1
+    while(i>=1):
+        f=f*i
+        i=i-1
+    return f
+
+if(x<=0):
+    print("Enter Number greater than 0")
 else:
-    i=1
-    s=1
-    while(i<=n):
-       s=s*i
-       i=i+1
-    print("Factorial of {} is {}".format(n,s))
+    print("_"*20)
+    y= fact(x)
+    print("Factorial of {} is {}".format(x,y))
+    print("_"*20)
 
 #palindrome
 n = int(input("Enter any number : "))
@@ -133,23 +131,60 @@ if(y==s):
     print("Number is palindrome")
 else:
     print("Number is not an palindrome")
+#Pos-Neg List
+
+n1 = input("Enter list of values seprated by space :")
+n2 = list(map(int, n1.split( )))
+print(n2,type(n2))
+P1,N1 = [],[]
+
+length =len(n2)
+print("Length of list is :{}".format(length))
+i=0
+while(i <= length-1):
+    if(n2[i]>0):
+        P1.append(n2[i])
+        i=i+1
+    else:
+        N1.append(n2[i])
+        i=i+1
+print(P1)
+print(N1)
 
 #Reverse
-n = int(input("print any number : "))\
+n=int(input("Enter Any Number : "))
 if(n<=0):
-    print("Number is Invalid")
+    print("Enter valid Numbers")
 else:
-    s=n
-    q=0
-    123
+    x=n
+    i=0
+    s=0
     while(n>0):
-        p = n%10
-        q = q*10 + p
-        n = n//10
-if(s==q):
-    print("{} is reversal :{}".format(s,q))
-else:
-    print("{} is not reversal :{}".format(s,q))
+        i= n%10
+        s = s*10 + i
+        n=n//10
+    print("Reverse of {} is {}".format(x,s))
+
+
+#sumavg
+n= int(input("Enter how many element you want in the list : "))
+print("# of element in the list : {}".format(n))
+
+L =list()
+print(L)
+i=1
+while(i<=n):
+    val =int(input("Enter number to be entered : "))
+    L.append(val)
+    i=i+1
+
+print(L)
+
+print("min is :{}".format(min(L)))
+print("max is :{}".format(max(L)))
+print("sum is :{}".format(sum(L)))
+print("len is :{}".format(len(L)))
+print("avg is :{}".format(sum(L)/len(L)))
 
 #Miscellaneous Control Statement
 #break
